@@ -8,15 +8,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
   :root {
-    --navy: #0f1b2d;
-    --steel: #16283f;
-    --blue: #2c4a6e;
+    --navy: #f8f0e4;
+    --steel: #ffffff;
+    --blue: #f2b073;
     --sky: #ff7a30;
     --gold: #c2570a;
-    --white: #ffffff;
-    --light: #e8eef5;
-    --muted: #8fa3b8;
-    --dark: #060a12;
+    --white: #2b2118;
+    --light: #4a3d31;
+    --muted: #6b5c4d;
+    --dark: #f1e4d1;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -67,14 +67,14 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 60px;
-    background: rgba(15,27,45,0.92);
+    background: rgba(248,240,228,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,122,48,0.15);
     transition: all 0.3s ease;
   }
   nav.scrolled {
     padding: 12px 60px;
-    background: rgba(15,27,45,0.98);
+    background: rgba(248,240,228,0.98);
   }
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
@@ -85,7 +85,7 @@
     border-radius: 10px;
     overflow: hidden;
     display: flex; align-items: center; justify-content: center;
-    background: #000;
+    background: #ffffff;
     flex-shrink: 0;
   }
   .nav-logo-icon img {
@@ -106,8 +106,8 @@
     font-weight: 700;
   }
   .nav-logo-tagline {
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--muted); font-weight: 600;
+    font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
+    color: #000000; font-weight: 700;
   }
   .nav-links {
     display: flex; align-items: center; gap: 36px;
@@ -148,8 +148,8 @@
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      linear-gradient(135deg, rgba(44,74,110,0.3) 0%, transparent 50%),
-      linear-gradient(to bottom, rgba(6,10,18,0.7) 0%, rgba(6,10,18,0.4) 50%, rgba(6,10,18,0.9) 100%);
+      linear-gradient(135deg, rgba(255,178,102,0.18) 0%, transparent 50%),
+      linear-gradient(to bottom, rgba(248,240,228,0.55) 0%, rgba(248,240,228,0.7) 50%, rgba(248,240,228,0.92) 100%);
     z-index: 1;
   }
   .hero-grid-bg {
@@ -162,8 +162,8 @@
   }
   .hero-image-bg {
     position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=85&fit=crop') center/cover no-repeat;
-    opacity: 0.25;
+    background: url('https://res.cloudinary.com/dt97offnl/image/upload/v1783393719/WhatsApp_Image_2026-07-07_at_12.41.13_AM_1_fiwgls.jpg') center/cover no-repeat;
+    opacity: 0.85;
     z-index: 0;
   }
   .hero-content {
@@ -174,12 +174,12 @@
   .hero-eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
-    color: var(--sky); font-weight: 600;
+    color: #000000; font-weight: 700;
     margin-bottom: 28px;
     padding: 8px 16px;
-    border: 1px solid rgba(255,122,48,0.3);
+    border: 1px solid rgba(255,122,48,0.6);
     border-radius: 20px;
-    background: rgba(255,122,48,0.08);
+    background: rgba(255,122,48,0.25);
     animation: fadeUp 0.8s ease both;
   }
   .hero-eyebrow::before {
@@ -236,8 +236,8 @@
     box-shadow: 0 12px 35px rgba(255,122,48,0.4);
   }
   .btn-outline {
-    border: 1.5px solid rgba(255,255,255,0.3);
-    color: white; padding: 16px 36px; border-radius: 6px;
+    border: 1.5px solid rgba(43,33,24,0.35);
+    color: var(--white); padding: 16px 36px; border-radius: 6px;
     font-size: 14px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
     text-decoration: none; cursor: none;
     transition: all 0.2s;
@@ -255,14 +255,14 @@
   }
   .btn-gold:hover {
     border-color: var(--gold) !important;
-    color: var(--navy) !important;
+    color: var(--white) !important;
     background: var(--gold) !important;
     box-shadow: 0 10px 30px rgba(194,87,10,0.3) !important;
   }
   .hero-stats {
     display: flex; gap: 60px; flex-wrap: wrap;
     padding-top: 40px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(43,33,24,0.15);
     animation: fadeUp 0.8s ease 0.55s both;
   }
   .hero-stat-num {
@@ -288,7 +288,7 @@
 
   /* TICKER MARQUEE */
   .ticker {
-    background: linear-gradient(135deg, var(--blue), #0d47a1);
+    background: linear-gradient(135deg, var(--blue), var(--gold));
     padding: 14px 0; overflow: hidden;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -343,7 +343,7 @@
     overflow: hidden;
   }
   .service-card {
-    background: var(--steel);
+    background: #e6d8bd;
     padding: 48px 36px;
     position: relative; overflow: hidden;
     transition: background 0.3s ease;
@@ -356,7 +356,7 @@
     transform: scaleX(0); transform-origin: left;
     transition: transform 0.4s ease;
   }
-  .service-card:hover { background: #1f3655; }
+  .service-card:hover { background: #dbc9a3; }
   .service-card:hover::before { transform: scaleX(1); }
   .service-icon {
     width: 58px; height: 58px;
@@ -405,7 +405,7 @@
   .about-img-main::after {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(to bottom, transparent 60%, rgba(15,27,45,0.8));
+    background: linear-gradient(to bottom, transparent 60%, rgba(43,33,24,0.3));
   }
   .about-badge {
     position: absolute; bottom: -24px; right: -24px;
@@ -486,7 +486,7 @@
   .project-card:hover .project-img img { transform: scale(1.06); }
   .project-placeholder {
     width: 100%; height: 100%;
-    background: linear-gradient(135deg, #16283f, #0f1b2d);
+    background: linear-gradient(135deg, var(--steel), var(--navy));
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     gap: 12px;
   }
@@ -494,7 +494,7 @@
   .project-placeholder-text { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); opacity: 0.5; }
   .project-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(15,27,45,0.9) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(43,33,24,0.3) 0%, transparent 60%);
   }
   .project-info { padding: 24px; }
   .project-type {
@@ -508,7 +508,7 @@
   .project-loc { font-size: 13px; color: var(--muted); }
   .coming-soon-badge {
     position: absolute; top: 16px; right: 16px;
-    background: var(--gold); color: var(--dark);
+    background: var(--gold); color: var(--white);
     font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
     font-weight: 700; padding: 5px 12px; border-radius: 20px;
   }
@@ -549,13 +549,15 @@
     aspect-ratio: 3/4;
     background: linear-gradient(135deg, var(--steel), var(--navy));
     display: flex; align-items: center; justify-content: center;
+    padding: 0;
   }
+  .why-img img { display: block; }
   .why-img i {
     font-size: 96px; color: var(--sky); opacity: 0.5;
   }
   .why-stats-overlay {
     position: absolute; top: 30px; left: -30px;
-    background: rgba(15,27,45,0.95); backdrop-filter: blur(10px);
+    background: rgba(255,250,243,0.95); backdrop-filter: blur(10px);
     border: 1px solid rgba(255,122,48,0.2);
     border-radius: 10px; padding: 24px 28px;
     display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
@@ -624,7 +626,7 @@
   .form-group select,
   .form-group textarea {
     width: 100%; padding: 14px 16px;
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,122,48,0.05);
     border: 1px solid rgba(255,122,48,0.2);
     border-radius: 8px; color: var(--white);
     font-size: 14px; font-family: 'Inter', sans-serif;
@@ -735,7 +737,7 @@
   .footer-links a:hover { color: var(--sky); }
   .footer-links a::before { content: '→'; font-size: 12px; color: var(--blue); }
   .footer-bottom {
-    padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 30px; border-top: 1px solid rgba(43,33,24,0.1);
     display: flex; align-items: center; justify-content: space-between;
     font-size: 13px; color: var(--muted);
   }
@@ -769,7 +771,8 @@
   .fab-btn:hover { transform: scale(1.13); }
   .fab-btn .fab-tooltip {
     position: absolute; right: 62px; top: 50%; transform: translateY(-50%);
-    background: rgba(15,27,45,0.92); color: var(--white);
+    background: rgba(255,250,243,0.97); color: var(--white);
+    border: 1px solid rgba(194,87,10,0.2);
     font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
     padding: 5px 10px; border-radius: 6px; white-space: nowrap;
     opacity: 0; pointer-events: none;
@@ -798,11 +801,11 @@
   #scrollTopBtn {
     position: fixed; bottom: 30px; left: 30px; z-index: 999;
     width: 48px; height: 48px; border-radius: 50%;
-    background: rgba(255,255,255,0.12);
+    background: rgba(43,33,24,0.07);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1.5px solid rgba(255,255,255,0.3);
-    color: rgba(255,255,255,0.9); font-size: 18px;
+    border: 1.5px solid rgba(43,33,24,0.3);
+    color: rgba(43,33,24,0.85); font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     cursor: none;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
@@ -812,9 +815,9 @@
   #scrollTopBtn.visible { opacity: 1; pointer-events: all; }
   #scrollTopBtn:hover {
     transform: scale(1.12) translateY(-3px);
-    background: rgba(255,255,255,0.22);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
-    color: white;
+    background: rgba(43,33,24,0.14);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.3);
+    color: var(--white);
   }
 
   /* HAMBURGER BUTTON */
@@ -853,7 +856,7 @@
   .mobile-menu-drawer {
     position: absolute; top: 0; right: 0;
     width: 78%; max-width: 300px; height: 100%;
-    background: linear-gradient(160deg, #0d1f38 0%, var(--dark) 100%);
+    background: linear-gradient(160deg, var(--steel) 0%, var(--dark) 100%);
     border-left: 1px solid rgba(255,122,48,0.18);
     transform: translateX(100%);
     transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
@@ -875,8 +878,8 @@
   .mobile-menu-brand span { color: var(--sky); }
   .mobile-close-btn {
     width: 34px; height: 34px; border-radius: 50%;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(43,33,24,0.06);
+    border: 1px solid rgba(43,33,24,0.15);
     color: var(--white); font-size: 16px;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer; transition: background 0.2s;
@@ -977,7 +980,7 @@
   .pkg-badge-tag {
     position: absolute; top: 14px; right: 14px;
     background: linear-gradient(135deg, var(--gold), #e8920a);
-    color: var(--navy); font-size: 9px; font-weight: 800;
+    color: var(--white); font-size: 9px; font-weight: 800;
     letter-spacing: 2px; padding: 4px 10px; border-radius: 20px;
     text-transform: uppercase;
   }
@@ -990,15 +993,15 @@
   .pkg-name {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px; letter-spacing: 3px;
-    color: var(--navy); margin-bottom: 6px;
+    color: var(--white); margin-bottom: 6px;
   }
   .pkg-price {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 14px; color: var(--navy); opacity: 0.85;
+    font-size: 14px; color: var(--white); opacity: 0.85;
   }
   .pkg-price span {
     font-size: 44px; letter-spacing: 1px; line-height: 1;
-    color: var(--navy); font-family: 'Bebas Neue', sans-serif;
+    color: var(--white); font-family: 'Bebas Neue', sans-serif;
   }
   .pkg-price small { font-size: 13px; font-family: 'Inter', sans-serif; font-weight: 600; }
 
@@ -1040,7 +1043,7 @@
     margin: 16px 20px 20px;
     padding: 13px;
     background: linear-gradient(135deg, var(--gold), #e8920a);
-    color: var(--navy); text-align: center; text-decoration: none;
+    color: var(--white); text-align: center; text-decoration: none;
     font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 2px;
     border-radius: 8px; border: none; cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -1084,7 +1087,7 @@
     font-size: 13px;
   }
   .calc-table thead tr {
-    background: rgba(6,10,18,0.6);
+    background: rgba(255,122,48,0.07);
     border-bottom: 2px solid rgba(255,122,48,0.2);
   }
   .calc-table th {
@@ -1114,7 +1117,7 @@
   .calc-table tfoot td {
     border-top: 2px solid rgba(255,122,48,0.2);
     border-bottom: none; padding: 14px 16px;
-    background: rgba(6,10,18,0.5);
+    background: rgba(255,122,48,0.06);
   }
   .calc-total-label {
     font-weight: 700; letter-spacing: 1px; font-size: 13px;
@@ -1203,7 +1206,7 @@
     width: 100%; height: 100%;
     display: flex; align-items: center; justify-content: center;
     background: linear-gradient(135deg, var(--blue), var(--sky));
-    color: var(--white);
+    color: #fff;
     font-size: 32px;
   }
 
@@ -1251,10 +1254,10 @@
 <!-- NAV -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">
-    <div class="nav-logo-icon"><img src="logo.jpeg" alt="Brihas Construction Logo"/></div>
+    <div class="nav-logo-icon"><img src="logo.png" alt="Brihas Construction Logo"/></div>
     <div class="nav-logo-text">
       <div class="nav-logo-name">BRIHAS</div>
-      <div class="nav-logo-tagline">Constructions</div>
+      <div class="nav-logo-tagline">Construction</div>
     </div>
   </a>
   <ul class="nav-links">
@@ -1941,10 +1944,7 @@
       <!-- LEFT: Big Prem Kumar photo -->
       <div class="about-img-wrap reveal">
         <div class="about-img-main">
-          <div class="about-img-placeholder">
-            <i class="fas fa-user-tie"></i>
-            <span>Founder Photo<br>Coming Soon</span>
-          </div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783401869/file_00000000fa9871fa84b607c9a1df6d4d_bbfbhv.png" alt="Deepan Gokulakannan - Founder" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:0;"/>
         </div>
         <div class="about-badge">
           <div class="about-badge-num">10+</div>
@@ -1959,15 +1959,15 @@
           <div class="owner-flip-wrap" id="ownerFlipCard">
             <div class="owner-flip-inner">
               <div class="owner-flip-front">
-                <div class="owner-photo owner-photo-placeholder"><i class="fas fa-user-tie"></i></div>
+                <img class="owner-photo" src="https://res.cloudinary.com/dt97offnl/image/upload/v1783401869/file_00000000fa9871fa84b607c9a1df6d4d_bbfbhv.png" alt="Deepan Gokulakannan - Founder"/>
               </div>
               <div class="owner-flip-back">
-                <div class="owner-photo owner-photo-back owner-photo-placeholder"><i class="fas fa-user-tie"></i></div>
+                <img class="owner-photo owner-photo-back" src="https://res.cloudinary.com/dt97offnl/image/upload/v1783401869/file_00000000fa9871fa84b607c9a1df6d4d_bbfbhv.png" alt="Deepan Gokulakannan - Founder"/>
               </div>
             </div>
           </div>
           <div>
-            <div class="owner-name">Founder Name</div>
+            <div class="owner-name">Deepan Gokulakannan</div>
             <div class="owner-title">Founder & Managing Director, Brihas Construction</div>
           </div>
         </div>
@@ -2005,67 +2005,55 @@
       <!-- Card 1 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398777/WhatsApp_Image_2026-07-07_at_12.41.13_AM_ayolg4.jpg" alt="Individual Villa - Porur, Chennai" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">Residential</div>
-          <div class="project-name">Individual Villa</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Porur, Chennai</div>
         </div>
       </div>
       <!-- Card 2 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398778/WhatsApp_Image_2026-07-07_at_12.41.22_AM_xmpwv2.jpg" alt="Duplex Villa - Chengalpattu" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">Residential</div>
-          <div class="project-name">Duplex Villa</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chengalpattu</div>
         </div>
       </div>
       <!-- Card 3 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398778/WhatsApp_Image_2026-07-07_at_12.41.21_AM_pgagus.jpg" alt="G+3 Building - Nanmangalam" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">RCC Structure</div>
-          <div class="project-name">G+3 Building</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Nanmangalam</div>
         </div>
       </div>
       <!-- Card 4 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398777/WhatsApp_Image_2026-07-07_at_12.41.21_AM_1_tspiaf.jpg" alt="Terrace Roofing - Mangadu" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">Roofing</div>
-          <div class="project-name">Terrace Roofing</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Mangadu</div>
         </div>
       </div>
       <!-- Card 5 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398777/WhatsApp_Image_2026-07-07_at_12.41.22_AM_1_vlrwfz.jpg" alt="Compound Works - Siruseri" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">Civil Works</div>
-          <div class="project-name">Compound Works</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Siruseri</div>
         </div>
       </div>
       <!-- Card 6 -->
       <div class="project-card">
         <div class="project-img">
-          <div class="project-placeholder"><div class="project-placeholder-icon"><i class="fas fa-image"></i></div><div class="project-placeholder-text">Photo Coming Soon</div></div><div class="coming-soon-badge">Coming Soon</div>
+          <img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783398776/WhatsApp_Image_2026-07-07_at_12.41.16_AM_oa9nmq.jpg" alt="Interior Design Works - Chennai" style="width:100%;height:100%;object-fit:cover;"/>
         </div>
         <div class="project-info">
-          <div class="project-type">Interior</div>
-          <div class="project-name">Interior Design Works</div>
-          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai, Tamil Nadu</div>
+          <div class="project-loc"><i class="fas fa-map-marker-alt" style="color:var(--sky); margin-right:6px;font-size:11px"></i>Chennai</div>
         </div>
       </div>
     </div>
@@ -2112,7 +2100,7 @@
         </div>
       </div>
       <div class="why-visual reveal">
-        <div class="why-img"><i class="fas fa-building"></i></div>
+        <div class="why-img"><img src="https://res.cloudinary.com/dt97offnl/image/upload/v1783399683/Gemini_Generated_Image_a4ebz9a4ebz9a4eb_r8rnp9.png" alt="Brihas Construction Quality Work" style="width:100%;height:100%;object-fit:contain;"/></div>
 
       </div>
     </div>
@@ -2146,7 +2134,7 @@
             <div class="contact-item-icon"><i class="fas fa-user-tie"></i></div>
             <div>
               <div class="contact-item-label">Managing Director</div>
-              <div class="contact-item-value">Founder Name</div>
+              <div class="contact-item-value">Deepan Gokulakannan</div>
             </div>
           </div>
           <div class="contact-item">
@@ -2160,7 +2148,7 @@
             <div class="contact-item-icon"><i class="fas fa-building"></i></div>
             <div>
               <div class="contact-item-label">Office Address</div>
-              <div class="contact-item-value" style="font-size:14px;line-height:1.5;">Address to be updated,<br>Chennai, Tamil Nadu</div>
+              <div class="contact-item-value" style="font-size:14px;line-height:1.5;">Vanagaram, Acharapakkam,<br>Chennai - 600095, Tamil Nadu</div>
             </div>
           </div>
         </div>
@@ -2245,10 +2233,10 @@
     <div class="footer-grid">
       <div>
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
-          <div style="width:64px;height:64px;border-radius:10px;overflow:hidden;background:#000;flex-shrink:0;"><img src="logo.jpeg" alt="Brihas Logo" style="width:100%;height:100%;object-fit:contain;"/></div>
+          <div style="width:64px;height:64px;border-radius:10px;overflow:hidden;background:#fff;flex-shrink:0;"><img src="logo.png" alt="Brihas Logo" style="width:100%;height:100%;object-fit:contain;"/></div>
           <div>
             <div class="footer-brand-name" style="font-size:22px;margin-bottom:0;color:var(--sky);font-weight:700">BRIHAS</div>
-            <div style="font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase">Constructions</div>
+            <div style="font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase">Construction</div>
           </div>
         </div>
         <p class="footer-brand-desc">Trusted civil engineers building quality structures across Tamil Nadu. From foundations to finishes — we build your dream with precision and pride.</p>
@@ -2279,7 +2267,7 @@
         </ul>
         <div style="margin-top:24px;padding:16px;background:rgba(255,122,48,0.07);border:1px solid rgba(255,122,48,0.15);border-radius:8px">
           <div style="font-size:11px;color:var(--sky);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">Office Address</div>
-          <div style="color:var(--white);font-weight:600;font-size:14px;line-height:1.6;">Address to be updated,<br>Chennai,<br>Tamil Nadu</div>
+          <div style="color:var(--white);font-weight:600;font-size:14px;line-height:1.6;">Vanagaram, Acharapakkam,<br>Chennai - 600095,<br>Tamil Nadu</div>
           <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,122,48,0.15);font-size:11px;color:var(--sky);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Service Area</div>
           <div style="color:var(--white);font-weight:600">All Over Tamil Nadu</div>
         </div>
@@ -2619,8 +2607,8 @@
   .qp-close {
     position: absolute; top: 9px; right: 9px;
     width: 26px; height: 26px; border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.18);
-    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(43,33,24,0.18);
+    background: rgba(43,33,24,0.06);
     color: var(--white); font-size: 12px;
     display: flex; align-items: center; justify-content: center;
     cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s;
@@ -2634,10 +2622,10 @@
     padding: 11px 20px 11px 14px;
     display: flex; align-items: center; gap: 8px;
   }
-  .qp-header-bar i { color: var(--navy); font-size: 14px; }
+  .qp-header-bar i { color: var(--white); font-size: 14px; }
   .qp-header-bar span {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 17px; letter-spacing: 2px; color: var(--navy);
+    font-size: 17px; letter-spacing: 2px; color: var(--white);
   }
 
   .qp-label {
@@ -2648,7 +2636,7 @@
   .qp-label .qp-opt { color: var(--muted); font-size: 9px; margin-left: 4px; font-style: italic; text-transform: none; }
 
   .qp-input, .qp-select {
-    width: 100%; background: rgba(255,255,255,0.05);
+    width: 100%; background: rgba(255,122,48,0.05);
     border: 1px solid rgba(255,122,48,0.2); border-radius: 7px;
     color: var(--white); font-size: 13px; font-family: 'Inter', sans-serif;
     padding: 8px 10px; outline: none;
@@ -2690,7 +2678,7 @@
   /* RIGHT PANEL */
   .qp-right {
     width: 210px; flex-shrink: 0;
-    background: linear-gradient(160deg, #0d1f38 0%, var(--dark) 100%);
+    background: linear-gradient(160deg, var(--steel) 0%, var(--dark) 100%);
     padding: 24px 18px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
@@ -2712,7 +2700,7 @@
   }
   .qp-logo-wrap {
     width: 70px; height: 70px; border-radius: 12px;
-    overflow: hidden; background: #000;
+    overflow: hidden; background: #ffffff;
     border: 2px solid rgba(194,87,10,0.4);
     box-shadow: 0 4px 20px rgba(194,87,10,0.2);
     margin-bottom: 12px;
@@ -2819,7 +2807,7 @@
     <!-- RIGHT: BRANDING -->
     <div class="qp-right">
       <div class="qp-logo-wrap">
-        <img src="logo.jpeg" alt="Brihas Construction Logo"/>
+        <img src="logo.png" alt="Brihas Construction Logo"/>
       </div>
       <div class="qp-brand-name">BRIHAS</div>
       <div class="qp-brand-sub">Construction</div>
