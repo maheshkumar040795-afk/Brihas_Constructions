@@ -1378,7 +1378,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label>Email Address *</label>
+          <label>Email Address <span style="font-weight:400; font-style:italic; text-transform:none; letter-spacing:0; font-size:12px;">(optional)</span></label>
           <input type="email" id="hf_email" placeholder="Email id" />
         </div>
         <div class="form-group">
@@ -2304,12 +2304,12 @@
     const area = document.getElementById('hf_area').value.trim();
     const notes = document.getElementById('hf_notes').value.trim();
 
-    if (!name || !phone || !email) {
-      alert('Please fill in your Full Name, Phone and Email Address.');
+    if (!name || !phone) {
+      alert('Please fill in your Full Name and Phone.');
       return;
     }
 
-    const summary = `Hi Brihas Construction! 👋\n\nFree Estimate Request:\n━━━━━━━━━━━━━━\n👤 Name: ${name}\n📞 Phone: ${phone}\n✉️ Email: ${email}\n📍 Plot Location: ${location || 'Not specified'}\n📐 Plot Area: ${area ? area + ' sqft' : 'Not specified'}\n💬 Notes: ${notes || 'No additional notes'}\n━━━━━━━━━━━━━━\nPlease share a free estimate at your earliest convenience. Thank you!`;
+    const summary = `Hi Brihas Construction! 👋\n\nFree Estimate Request:\n━━━━━━━━━━━━━━\n👤 Name: ${name}\n📞 Phone: ${phone}\n✉️ Email: ${email || 'Not provided'}\n📍 Plot Location: ${location || 'Not specified'}\n📐 Plot Area: ${area ? area + ' sqft' : 'Not specified'}\n💬 Notes: ${notes || 'No additional notes'}\n━━━━━━━━━━━━━━\nPlease share a free estimate at your earliest convenience. Thank you!`;
     const encoded = encodeURIComponent(summary);
 
     const btns = document.getElementById('shareBtns');
