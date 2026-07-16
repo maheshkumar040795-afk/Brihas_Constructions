@@ -36,14 +36,14 @@
     position: fixed; top: 0; left: 0; right: 0; width: 100%; box-sizing: border-box; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px 60px;
-    background: rgba(248,240,228,0.92);
+    background: rgba(15,15,26,0.92);
     backdrop-filter: blur(12px);
     border-bottom: none;
     transition: all 0.3s ease;
   }
   nav.scrolled {
     padding: 12px 60px;
-    background: rgba(248,240,228,0.98);
+    background: rgba(15,15,26,0.98);
   }
   .nav-logo {
     display: flex; align-items: center; gap: 14px;
@@ -77,14 +77,14 @@
   }
   .nav-logo-tagline {
     font-size: 14px; letter-spacing: 2px; text-transform: uppercase;
-    color: #000000; font-weight: 700;
+    color: #ffffff; font-weight: 700;
   }
   .nav-links {
     display: flex; align-items: center; gap: 36px;
     list-style: none;
   }
   .nav-links a {
-    color: #000000; text-decoration: none;
+    color: #ffffff; text-decoration: none;
     font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
     font-weight: 500; position: relative; transition: color 0.3s;
   }
@@ -170,7 +170,7 @@
   }
   .hero-headline {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(72px, 9vw, 130px);
+    font-size: clamp(43px, 5.4vw, 78px);
     line-height: 0.92;
     letter-spacing: 2px;
     color: #ffffff;
@@ -869,7 +869,7 @@
   }
   .ham-btn span {
     display: block; width: 24px; height: 2px;
-    background: var(--white);
+    background: #ffffff;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
   }
@@ -1370,24 +1370,24 @@
         <div class="form-row">
           <div class="form-group">
             <label>Full Name *</label>
-            <input type="text" id="hf_name" placeholder="Ravi Kumar" />
+            <input type="text" id="hf_name" placeholder="Your name" />
           </div>
           <div class="form-group">
             <label>Phone *</label>
-            <input type="tel" id="hf_phone" placeholder="9876543210" />
+            <input type="tel" id="hf_phone" placeholder="Contact number" />
           </div>
         </div>
         <div class="form-group">
           <label>Email Address *</label>
-          <input type="email" id="hf_email" placeholder="yourname@gmail.com" />
+          <input type="email" id="hf_email" placeholder="Email id" />
         </div>
         <div class="form-group">
           <label>Plot Location</label>
-          <input type="text" id="hf_location" placeholder="e.g. Anna Nagar, Chennai" />
+          <input type="text" id="hf_location" placeholder="Location" />
         </div>
         <div class="form-group">
           <label>Plot Area (sq.ft)</label>
-          <input type="number" id="hf_area" placeholder="1200" min="0" />
+          <input type="number" id="hf_area" placeholder="Square feet" min="0" />
         </div>
         <div class="hero-form-divider">
           <span>About Your Requirement</span>
@@ -2537,16 +2537,17 @@
     }
 
     function submitQuotePopup() {
-      const name  = document.getElementById('qp_name').value.trim();
-      const phone = document.getElementById('qp_phone').value.trim();
-      const email = document.getElementById('qp_email').value.trim();
-      const city  = document.getElementById('qp_city').value;
+      const name     = document.getElementById('qp_name').value.trim();
+      const phone    = document.getElementById('qp_phone').value.trim();
+      const location = document.getElementById('qp_location').value.trim();
+      const area     = document.getElementById('qp_area').value.trim();
 
       if (!name) { document.getElementById('qp_name').focus(); showQpError('Please enter your name.'); return; }
       if (!phone || phone.length < 10) { document.getElementById('qp_phone').focus(); showQpError('Please enter a valid 10-digit mobile number.'); return; }
+      if (!location) { document.getElementById('qp_location').focus(); showQpError('Please enter your plot location.'); return; }
+      if (!area) { document.getElementById('qp_area').focus(); showQpError('Please enter your plot area.'); return; }
 
-      const emailLine = email ? `\n📧 Email: ${email}` : '';
-      const msg = `Hi Brihas Construction! 👋\n\n🎯 FREE QUOTE REQUEST\n━━━━━━━━━━━━━━\n👤 Name: ${name}\n📞 Mobile: ${phone}${emailLine}\n📍 City: ${city}\n━━━━━━━━━━━━━━\nPlease provide me a free quote for my construction project. Thank you!`;
+      const msg = `Hi Brihas Construction! 👋\n\n🎯 FREE QUOTE REQUEST\n━━━━━━━━━━━━━━\n👤 Name: ${name}\n📞 Mobile: ${phone}\n📍 Plot Location: ${location}\n📐 Plot Area: ${area} sq.ft\n━━━━━━━━━━━━━━\nPlease provide me a free quote for my construction project. Thank you!`;
 
       closeQuotePopup();
       window.open(`https://wa.me/918825690193?text=${encodeURIComponent(msg)}`, '_blank');
@@ -2783,22 +2784,11 @@
         <input class="qp-input" id="qp_phone" type="tel" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel"/>
       </div>
 
-      <label class="qp-label">Email ID <span class="qp-opt">(optional)</span></label>
-      <input class="qp-input" id="qp_email" type="email" placeholder="Enter your email (optional)" autocomplete="email"/>
+      <label class="qp-label">Plot Location <span class="qp-req">*</span></label>
+      <input class="qp-input" id="qp_location" type="text" placeholder="e.g. Anna Nagar, Chennai" autocomplete="off"/>
 
-      <label class="qp-label">City <span class="qp-req">*</span></label>
-      <select class="qp-select" id="qp_city">
-        <option value="Chennai">Chennai</option>
-        <option value="Coimbatore">Coimbatore</option>
-        <option value="Madurai">Madurai</option>
-        <option value="Salem">Salem</option>
-        <option value="Trichy">Trichy</option>
-        <option value="Tirunelveli">Tirunelveli</option>
-        <option value="Erode">Erode</option>
-        <option value="Vellore">Vellore</option>
-        <option value="Thanjavur">Thanjavur</option>
-        <option value="Other (Tamil Nadu)">Other (Tamil Nadu)</option>
-      </select>
+      <label class="qp-label">Plot Area (sq.ft) <span class="qp-req">*</span></label>
+      <input class="qp-input" id="qp_area" type="number" placeholder="e.g. 1200" min="0" autocomplete="off"/>
 
       <div id="qp_error"></div>
 
